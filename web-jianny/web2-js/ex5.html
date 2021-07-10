@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Object</h1>
+        <h2>Create</h2>
+        <script>
+            var cowerkers={
+                "programmer":"jianny",
+                "designer":"kong"
+            };
+            document.write("programmer : " + cowerkers.programmer+"<br>")
+            document.write("designer : "+cowerkers.designer+"<br>")
+            cowerkers.bookkeeper = "tubu"
+            document.write("bookkeeper : " + cowerkers.bookkeeper + "<br>")
+            cowerkers["data scientist"] = "taco";
+            document.write("data scientist : " + cowerkers["data scientist"] + "<br>")
+        </script>
+
+        <h2>Interate</h2>
+        <script>
+            for(var key in cowerkers){
+                document.write(key + " : " + cowerkers[key] + "<br>")
+            }
+        </script>
+
+        <h2>Property & Method</h2>
+        <script>
+            cowerkers.showAll = function(){
+                for(var key in this){
+                    document.write(key + " : " + this[key] + "<br>")
+                } 
+            }
+
+            cowerkers.showAll();
+        </script>
+    </body>
+</html>
