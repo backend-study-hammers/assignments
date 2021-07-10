@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WEB1 - JavaScript</title>
+        <meta charset="utf-8">       
+        <link rel="stylesheet" href="style.css"> 
+        <style>
+            .js{
+                font-weight: bold;
+                color: red;
+            }
+            #first{
+                color: green;
+            }
+            span{
+                color:blue;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h1><a href="index.html">WEB</a></h1>
+        <input type="button" value="night" onclick="
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white'
+        ">
+        <input type="button" value="day" onclick="
+        document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black'
+        ">
+        <input type="button" value="black" onclick="
+            if(document.querySelector('body').dataset.mode=='day'){
+                document.querySelector('body').style.backgroundColor='black';
+                document.querySelector('body').style.color='white'
+                document.querySelector('body').dataset.mode='night'
+                this.value = 'day';
+            }else{
+                document.querySelector('body').style.backgroundColor='white';
+                document.querySelector('body').style.color='black'
+                document.querySelector('body').dataset.mode='day'
+                this.value = 'night';
+            }
+        ">
+        <h2 style="background-color:coral;color:powderblue">What is JavaScript?</h2>
+        <p>
+            <span id="first"">JavaScript</span> often abbreviated as JS, is a programming language that conforms to the ECMAScript specification.[9] 
+            <span class="js">JavaScript</span> is high-level, often just-in-time compiled, and multi-paradigm. 
+            It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.
+            Alongside <span>HTML</span> and <span>CSS</span>, <span class="js">JavaScript</span> is one of the core technologies of the World Wide Web.
+            [10] Over 97% of websites use it client-side for web page behavior,[11] often incorporating third-party libraries.
+            [12] All major web browsers have a dedicated <span class="js">JavaScript</span> engine to execute the code on the user's device.
+        </p>
+    </body>
+</html>
