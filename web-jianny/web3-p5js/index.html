@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script>
+</head>
+
+<body>
+    <script>
+        function setup() {
+            createCanvas(windowWidth, windowHeight);
+            x = 0;
+            y = 0;
+        }
+
+        // function draw() {
+        //     background(220);
+        //     x += 10;
+        //     y += 5;
+        //     circle(x, y, 100);
+        // }
+        function draw(){
+            console.log('mouseIsPressed', mouseIsPressed);
+            // if(mouseIsPressed){
+            //     background(random(255),random(255),random(255));
+            // }
+            px = pow(mouseX-pmouseX, 2);
+            py = pow(mouseY-pmouseY, 2);
+            speed = sqrt(px+py)
+            circle(mouseX, mouseY, speed);
+            // line(pmouseX, pmouseY, mouseX, mouseY);
+        }
+
+        function mousePressed(){
+            background(random(255),random(255),random(255));
+        }
+    </script>
+</body>
+
+</html>
