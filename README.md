@@ -1,15 +1,17 @@
 # assignments
+## 자바뿌실핵망치🔨
 
-### 자바뿌실핵망치
 실습 or 과제 실습 후 올리는 공간입니다.
 [생활코딩 Web N](https://opentutorials.org/course/3083)
+
 ### 생활코딩 Web N 목차
-web1- HTML  
-web2- CSS  
-web2- JavaScript  
-web2- Python  
-Web2- Php  
-Web2- Home server  
-Web2- Domain Name System  
-Web2- HTTP  
-Web2- OAuth 2.0
+- web1- HTML (2021.07.05 ~ 2021.07.11) 완료  
+- web2- CSS (2021.07.05 ~ 2021.07.11) 완료  
+- web2- JavaScript (2021.07.05 ~ 2021.07.11) 완료  
+- Web2- Home server (2021.07.12 ~ 2021.07.18)  
+- Web2- Domain Name System  (2021.07.12 ~ 2021.07.18)  
+- Web2- HTTP  (2021.07.12 ~ 2021.07.18)  
+- Web2- OAuth 2.0 (2021.07.12 ~ 2021.07.18)  
+
+### 인프런
+- 스프링 입문 - 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술 (2021.07.12 ~ 2021.07.18)  

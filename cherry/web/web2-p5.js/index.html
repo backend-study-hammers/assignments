@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.min.js"></script>
+  </head>
+  <body>
+    <script>
+    function setup() {
+      createCanvas(windowWidth, windowHeight);
+      background('gray');
+      stroke('blue');
+      strokeWeight(10);
+      fill('red');
+      rect(100,100,100);
+      fill(255,0,255,65);
+      circle(100,200,100);
+      noFill();
+      rect(100,200,100);
+      x=0;
+      y=0;
+    }
+    function draw(){
+      //background(220);
+      //if(mouseIsPressed){
+      // background(random(250),random(255),random(255));
+      //}
+      x=x+10;
+      y=y+5;
+      circle(random(400),random(400),random(100));
+      cirle(x,y,100);
+      //circle(mouseX,mouseY,random(100));
+    }
+    function mousePressed(){
+      background(random(250),random(255),random(255));
+    }
+
+    </script>
+  </body>
+</html>
