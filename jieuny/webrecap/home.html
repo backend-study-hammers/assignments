@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <script src="colors.js"></script>
+    
+    <body>
+        <h1><a href="home.html">2호선</a></h1>
+         <input type="button" value="night" onclick="
+            s(this);
+        ">
+        <ol>
+            <li><a href="jamsil.html">잠실</a></li>
+            <li><a href="euljiro.html">을지로</a></li>
+            <li><a href="gangnam.html">강남</a></li>
+        </ol>
+       
+        <h2>2호선 list</h2>
+        <p>
+            잠실 이대 강남 뚝섬 시청 을지로 등등
+        </p>
+        <input type="button" value="night" onclick="
+        s(this);
+        ">
+        
+        <script>
+            var i=0;
+            while(i<20){
+                document.write('<input type="button" value="night" onclick="s(this);">'+'<br>');
+                document.write('<input type="button" value="night" onclick="s(this);">');
+                i++;
+            }
+        </script>
+    </body>
+</html>
