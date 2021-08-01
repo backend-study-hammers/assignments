@@ -2,6 +2,7 @@ package hello.core.order;
 
 import hello.core.annotation.MainDiscountPolicy;
 import hello.core.discount.DiscountPolicy;
+import hello.core.discount.FixDiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
 import lombok.RequiredArgsConstructor;
@@ -13,10 +14,11 @@ import org.springframework.stereotype.Component;
 //@RequiredArgsConstructor//생성자 자동으로 생성해줌
 public class OrderServiceImpl implements OrderService{
 
-    private final MemberRepository memberRepository;
-    private final DiscountPolicy discountPolicy;
     //private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
     //private final DiscountPolicy discountPolicy = new RateDiscountPolicy();
+
+    private final MemberRepository memberRepository;
+    private final DiscountPolicy discountPolicy;
 
     @Autowired//생성자가 하나 일때는 @Autowired를 생략해도 자동으로 적용
     public OrderServiceImpl(MemberRepository memberRepository, /*@Qualifier("mainDiscountPolicy")*/ @MainDiscountPolicy DiscountPolicy discountPolicy) {
