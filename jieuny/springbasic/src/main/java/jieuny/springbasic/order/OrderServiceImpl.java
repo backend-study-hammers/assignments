@@ -19,4 +19,8 @@ public class OrderServiceImpl implements OrderService{
         int discountprice= discountPolicy.discount(member, itemprice);
         return new Order(memberId, itemname,itemprice, discountprice);
     }
+
+    public MemberRepository getMemberRepository(){
+        return this.memberRepository;
+    }
 }
