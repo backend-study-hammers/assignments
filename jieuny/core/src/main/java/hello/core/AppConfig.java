@@ -1,8 +1,7 @@
 package hello.core;
 
 import hello.core.discount.DiscountPolicy;
-import hello.core.discount.Fixdiscountpolicy;
-import hello.core.discount.RatediscountPolicy;
+import hello.core.discount.RateDiscountPolicy;
 import hello.core.member.MemberRepository;
 import hello.core.member.MemberService;
 import hello.core.member.MemberServiceImpl;
@@ -17,19 +16,23 @@ public class AppConfig {
 
     @Bean
     public MemberService memberService(){
+        System.out.println("class memberService");
         return new MemberServiceImpl(memberRepository());
     }
     @Bean
     public MemberRepository memberRepository() {
+        System.out.println("class memberRepository");
         return new MemoryMemberRepository();
     }
     @Bean
-    public OrderService orderService(){
-        return new OrderServiceImpl(memberRepository(), discountPolicy());
-    }
+   public OrderService orderService(){
+        System.out.println("class orderService");
+        return new OrderServiceImpl(memberRepository(),discountPolicy());
+        //return null;
+   }
     @Bean
     public DiscountPolicy discountPolicy() {
-        return new RatediscountPolicy();
+        return new RateDiscountPolicy();
     }
 
 }
