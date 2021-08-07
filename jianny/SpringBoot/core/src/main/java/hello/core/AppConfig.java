@@ -45,6 +45,7 @@ public class AppConfig { //설정(구성)정보를 담당
     public OrderService orderService(){
         System.out.println("call AppConfig.orderService");
         return new OrderServiceImpl(memberRepository(), discountPolicy());
+//        return null;
     }
 
     @Bean
