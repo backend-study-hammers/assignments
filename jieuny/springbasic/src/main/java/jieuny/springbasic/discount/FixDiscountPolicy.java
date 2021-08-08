@@ -2,8 +2,11 @@ package jieuny.springbasic.discount;
 
 import jieuny.springbasic.member.Grade;
 import jieuny.springbasic.member.Member;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
-public class FixDisountPolicy implements DiscountPolicy{
+@Component
+public class FixDiscountPolicy implements DiscountPolicy{
     private int discountprice= 1000;
 
     @Override
