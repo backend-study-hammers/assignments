@@ -1,7 +1,6 @@
 package jieuny.springbasic;
 
 import jieuny.springbasic.discount.DiscountPolicy;
-import jieuny.springbasic.discount.FixDisountPolicy;
 import jieuny.springbasic.discount.RateDiscountPolicy;
 import jieuny.springbasic.member.MemberRepository;
 import jieuny.springbasic.member.MemberService;

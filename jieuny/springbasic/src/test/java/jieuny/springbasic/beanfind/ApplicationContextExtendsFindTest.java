@@ -1,9 +1,8 @@
 package jieuny.springbasic.beanfind;
 
 import jieuny.springbasic.discount.DiscountPolicy;
-import jieuny.springbasic.discount.FixDisountPolicy;
+import jieuny.springbasic.discount.FixDiscountPolicy;
 import jieuny.springbasic.discount.RateDiscountPolicy;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.NoUniqueBeanDefinitionException;
@@ -21,7 +20,7 @@ public class ApplicationContextExtendsFindTest {
     static class TestConfig{
         @Bean
         DiscountPolicy fixdiscount(){
-            return new FixDisountPolicy();
+            return new FixDiscountPolicy();
         }
         @Bean
         DiscountPolicy ratediscount(){
