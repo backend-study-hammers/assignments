@@ -14,12 +14,12 @@ public class MemberServiceImpl implements MemberService{
     }
 
     @Override
-    public void join(Member member) {
+    public void join(MemberEntity member) {
         memberRepository.save(member);
     }
 
     @Override
-    public Member findMember(Long memberId) {
+    public MemberEntity findMember(Long memberId) {
         return memberRepository.findById(memberId);
     }
 

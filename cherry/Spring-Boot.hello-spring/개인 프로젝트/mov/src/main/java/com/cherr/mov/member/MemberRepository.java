@@ -2,8 +2,8 @@ package com.cherr.mov.member;
 
 public interface MemberRepository {
 
-    void save(Member member);
+    void save(MemberEntity member);
 
-    Member findById(Long memberId);
+    MemberEntity findById(Long memberId);
 
 }

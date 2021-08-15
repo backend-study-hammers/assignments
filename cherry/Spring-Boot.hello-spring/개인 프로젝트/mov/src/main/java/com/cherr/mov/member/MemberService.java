@@ -2,7 +2,7 @@ package com.cherr.mov.member;
 
 public interface MemberService {
 
-    void join(Member member);//회원가입
+    void join(MemberEntity member);//회원가입
 
-    Member findMember(Long memberId);//회원조회
+    MemberEntity findMember(Long memberId);//회원조회
 }
