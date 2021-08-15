@@ -18,7 +18,7 @@ class MemoryProfileRepositoryTest {
         ProfileService profileService= new ProfileServiceImpl();
         ProfileService profile= ac.getBean(ProfileService.class);
         profile.join(jieun);
-        System.out.println(profile.findprofile("jieun"));
+        System.out.println(profile.findprofileByName("jieun"));
     }
 
 }

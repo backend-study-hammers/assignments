@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+        .container{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 30px;
+            border: 3px solid gray;
+            border-radius: 40px;
+            background-color: #FFFFCC;
+            height: 300px;
+            width: 350px;
+        }
+        body{
+            background-color: #CCCCFF;
+        }
+        h1{position: absolute;
+            left: 50%;
+            top: 10%;
+            transform: translate(-50%, -50%);
+        }
+        h3{position: absolute;
+            left: 50%;
+            top: 16%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+<div >
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th><h1><center>프로필 정보</center></h1></th><br>
+                <th><h3><center>이름 &nbsp; &nbsp; &nbsp;학교 &nbsp; &nbsp; &nbsp; 전공 &nbsp; &nbsp; &nbsp; 학번</center></h3></th>
+            </tr>
+            </thead>
+            <tbody class="container">
+            <tr th:each="profile : ${profiles}">
+                <center>
+                    <div id="name"><td th:text="${profile.name}"></td></div>
+                    <div id="university"><td th:text="${profile.university}"></td></div>
+                    <div id="major"><td th:text="${profile.major}"></td></div>
+                    <div id="studentId"><td th:text="${profile.studentID}"></td></div>
+                </center>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div> <!-- /container -->
+</body>
+</html>

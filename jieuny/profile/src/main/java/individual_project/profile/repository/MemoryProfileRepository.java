@@ -2,11 +2,11 @@ package individual_project.profile.repository;
 
 import individual_project.profile.profile.Profile;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
-@Component
+@Repository
 public class MemoryProfileRepository implements ProfileRepository {
     public static Map<String, Profile> store=new HashMap<>();
 
@@ -16,7 +16,14 @@ public class MemoryProfileRepository implements ProfileRepository {
     }
 
     @Override
-    public Profile findByName(String name) {
-        return store.get(name);
+    public Optional<Profile> findByName(String name) {
+        return store.values().stream()
+                .filter(profile -> profile.getName().equals(name))
+                .findAny();
+    }
+
+    @Override
+    public List<Profile> findAll() {
+        return new ArrayList<>(store.values());
     }
 }

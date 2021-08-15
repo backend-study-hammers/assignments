@@ -1,10 +1,11 @@
 package individual_project.profile.profile;
 
 public class Profile {
-    String name;
-    String university;
-    String major;
-    Long studentID;
+    //@Id@GeneratedValue(strategy = GenerationType.IDENTITY)
+    public String name;
+    public String university;
+    public String major;
+    public Long studentID;
 
     public Profile(String name, String university, String major, Long studentID){
         this.name= name;
@@ -12,6 +13,7 @@ public class Profile {
         this.major= major;
         this.studentID= studentID;
     }
+
 
     public String getName() {
         return name;
