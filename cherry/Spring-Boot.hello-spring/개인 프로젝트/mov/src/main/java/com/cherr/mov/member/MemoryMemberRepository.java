@@ -8,15 +8,15 @@ import java.util.Map;
 @Component
 public class MemoryMemberRepository implements MemberRepository{
 
-    private static Map<Long, Member> store = new HashMap<>();
+    private static Map<Long, MemberEntity> store = new HashMap<>();
 
     @Override
-    public void save(Member member) {
+    public void save(MemberEntity member) {
         store.put(member.getId(),member);
     }
 
     @Override
-    public Member findById(Long memberId) {
+    public MemberEntity findById(Long memberId) {
         return store.get(memberId);
     }
 }

@@ -9,6 +9,7 @@ import javax.persistence.*;
 @Entity
 @Getter
 @NoArgsConstructor
+@Table(name = "posts")
 public class PostsEntity extends TimeEntity{
 
     @Id

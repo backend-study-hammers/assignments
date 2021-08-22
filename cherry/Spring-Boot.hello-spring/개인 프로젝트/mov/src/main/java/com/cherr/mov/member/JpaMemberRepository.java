@@ -12,13 +12,13 @@ public class JpaMemberRepository {
         this.em = em;
     }
 
-    public Member save(Member member) {
+    public MemberEntity save(MemberEntity member) {
         em.persist(member);
         return member;
     }
 
-    public Member findById(Long memberId){
-        Member member =em.find(Member.class, memberId);
+    public MemberEntity findById(Long memberId){
+        MemberEntity member =em.find(MemberEntity.class, memberId);
         return member;
     }
 }
