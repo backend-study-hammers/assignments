@@ -16,10 +16,8 @@ public class MemoryProfileRepository implements ProfileRepository {
     }
 
     @Override
-    public Optional<Profile> findByName(String name) {
-        return store.values().stream()
-                .filter(profile -> profile.getName().equals(name))
-                .findAny();
+    public Profile findByName(String name) {
+        return store.get(name);
     }
 
     @Override

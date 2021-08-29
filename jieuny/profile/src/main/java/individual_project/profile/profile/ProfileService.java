@@ -5,6 +5,6 @@ import java.util.Optional;
 
 public interface ProfileService {
     void join(Profile profile);
-    Optional<Profile> findprofileByName(String name);
+    Profile findprofileByName(String name);
     List<Profile> findMembers();
 }

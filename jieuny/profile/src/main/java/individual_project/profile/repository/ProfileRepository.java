@@ -8,6 +8,6 @@ import java.util.Optional;
 
 public interface ProfileRepository {
     void save(Profile profile);
-    Optional<Profile> findByName(String name);
+    Profile findByName(String name);
     List<Profile> findAll();
 }
