@@ -1,20 +1,26 @@
 package individual_project.profile.profile;
 
-public class Profile {
-    //@Id@GeneratedValue(strategy = GenerationType.IDENTITY)
-    public String name;
-    public String university;
-    public String major;
-    public Long studentID;
+import javax.persistence.*;
 
-    public Profile(String name, String university, String major, Long studentID){
+@Entity
+public class Profile {
+    @Id
+    @Column(name = "NAME")
+    private String name;
+    @Column(name = "UNIVERSITY")
+    private String university;
+    @Column(name = "MAJOR")
+    private String major;
+    @Column(name= "STUDENTID")
+    private Long studentID;
+
+    /*public Profile(String name, String university, String major, Long studentID){
         this.name= name;
         this.university= university;
         this.major= major;
         this.studentID= studentID;
     }
-
-
+    */ //기본 생성자 넣어야함
     public String getName() {
         return name;
     }
@@ -43,9 +49,7 @@ public class Profile {
         return studentID;
     }
 
-    public void setStudentID(Long studentID) {
-        this.studentID = studentID;
+    public void setStudentID(Long studentId) {
+        this.studentID = studentId;
     }
-
-
 }

@@ -1,10 +1,15 @@
 package individual_project.profile.controller;
 
+
 public class ProfileForm {
+
     private String name;
+
     private String university;
+
     private String major;
-    private Long studentId;
+
+    private Long studentID;
 
     public String getUniversity() {
         return university;
@@ -22,12 +27,12 @@ public class ProfileForm {
         this.major = major;
     }
 
-    public Long getStudentId() {
-        return studentId;
+    public Long getStudentID() {
+        return studentID;
     }
 
-    public void setStudentId(Long studentId) {
-        this.studentId = studentId;
+    public void setStudentID(Long studentID) {
+        this.studentID = studentID;
     }
 
     public String getName() {
